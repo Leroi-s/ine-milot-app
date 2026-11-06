@@ -1,0 +1,9 @@
+{
+  "appId": "com.inemilot.app",
+  "appName": "INE Milot",
+  "webDir": "www",
+  "backgroundColor": "#1a3a6b",
+  "android": {
+    "allowMixedContent": false
+  }
+}
