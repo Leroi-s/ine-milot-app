@@ -1711,8 +1711,27 @@ footer{ display:none !important; }
 #heroInscriptionBanner *{ color:#0d3d2e !important; }
 @media (min-width:900px){ #appTabbar,#moreSheet{ max-width:520px; } }
 </style>
+  <style>
+#ine-splash{position:fixed;inset:0;z-index:99999;background:#fff;display:flex;align-items:center;justify-content:center;transition:opacity .5s ease}
+#ine-splash img{width:min(80vw,440px);height:auto}
+#ine-splash.hide{opacity:0;pointer-events:none}
+</style>
 </head>
 <body>
+  <!-- 2) Juste après l'ouverture de <body> -->
+<div id="ine-splash"><img src="logo.png" alt="Institution Évangélique Nouvelle Espérance de Milot"></div>
+<script>
+(function () {
+  var s = document.getElementById("ine-splash");
+  // L'écran de démarrage ne s'affiche que dans l'application, pas sur le site
+  var dansApp = window.Capacitor || location.hostname === "localhost";
+  if (!dansApp) { s.remove(); return; }
+  setTimeout(function () {
+    s.classList.add("hide");
+    setTimeout(function () { s.remove(); }, 600);
+  }, 2200);
+})();
+</script>
 <!-- ===== FIREBASE LOADER ===== -->
 <div id="fb-loader" style="display:none;position:fixed;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green-mid),var(--gold));z-index:9999;animation:fbbar 1.2s ease-in-out infinite alternate;"></div>
 
