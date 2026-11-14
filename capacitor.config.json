@@ -5,12 +5,10 @@
   "backgroundColor": "#ffffff",
   "plugins": {
     "SplashScreen": {
-      "launchShowDuration": 2500,
+      "launchShowDuration": 300,
       "launchAutoHide": true,
       "backgroundColor": "#ffffff",
-      "showSpinner": false,
-      "splashFullScreen": true,
-      "splashImmersive": true
+      "showSpinner": false
     }
   }
 }
