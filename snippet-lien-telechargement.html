@@ -1,0 +1,10 @@
+<!-- À coller dans index.html, là où le bouton doit apparaître (accueil, pied de page...) -->
+<a id="lien-apk"
+   href="https://github.com/Leroi-s/ine-milot-app/releases/latest/download/INE-Milot.apk"
+   style="display:inline-block;padding:12px 20px;border-radius:24px;background:#1a3a6b;color:#fff;font-weight:600;text-decoration:none">
+  📲 Télécharger l'application Android
+</a>
+<script>
+// Masquer le bouton une fois dans l'application elle-même
+if (window.Capacitor) { var b = document.getElementById("lien-apk"); if (b) b.style.display = "none"; }
+</script>
